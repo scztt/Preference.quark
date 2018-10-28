@@ -1,0 +1,16 @@
+(
+          name: "Preference",
+       summary: "General library for saving / loading preferences.",
+        author: "scott@artificia.org",
+     copyright: "Frank Scott Carver, 2018",
+       license: "MIT",
+       version: "0.0.1",
+        schelp: "",
+          test: "",
+           url: "http://github.com/scztt/Preference.quark",
+  dependencies: [
+
+                ],
+  isCompatible: false ,
+         since: ""
+)

@@ -1,0 +1,60 @@
+TITLE:: Preference
+summary:: General library for saving / loading preferences.
+categories:: Files
+related:: Classes/Archive Classes/Connection
+
+DESCRIPTION::
+A library for simplified loading / saving of preferences based on a sequence of keys.
+
+
+Simple example:
+
+code::
+(
+~name = Preference(\MyLibrary, \UserName)
+	.default_({ "Sarah SuperCollider" });
+~view = StaticText().fixedSize_(300@50).font_(Font(size:30)).front;
+~name.signal(\value).connectTo(~view.valueSlot("string"));
+{
+	3.wait;
+	~name.value = "Silvia SuperCollider";
+	~name.write;
+	3.wait;
+	~name.value = "Sol SuperCollider";
+	~name.write;
+}.fork
+)
+::
+
+CLASSMETHODS::
+
+METHOD:: new
+argument::  ... keys
+
+
+INSTANCEMETHODS::
+
+METHOD:: class
+argument:: newClass
+
+METHOD:: hasValue
+
+METHOD:: clear
+
+METHOD:: prStoredValue
+
+METHOD:: prConstrainedValue
+argument:: value
+
+METHOD:: default
+argument:: value
+
+METHOD:: write
+
+METHOD:: spec
+argument:: newSpec
+
+METHOD:: value
+argument:: value
+
+METHOD:: init
